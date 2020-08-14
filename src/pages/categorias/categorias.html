@@ -9,7 +9,7 @@
 
 <ion-content padding>
   <ion-list>
-    <button ion-item *ngFor="let item of items">
+    <button ion-item *ngFor="let item of items" (click)="showProdutos()">
       <ion-label>{{ item.nome }}</ion-label>
     </button>
   </ion-list>
