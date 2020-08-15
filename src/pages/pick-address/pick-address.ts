@@ -40,8 +40,11 @@ export class PickAddressPage {
           pagamento: null,
           itens: cart.items.map(x => {return {quantidade: x.quantidade, produto: {id: x.produto.id}}})
         }
-      }, error =>{
-      })
+      }, error => {
+        if (error.status == 403) {
+          this.navCtrl.setRoot('HomePage');
+        }
+      });
     }
   }
 
